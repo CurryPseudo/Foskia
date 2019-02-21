@@ -1,0 +1,276 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 159ec6ff8a9f1344ea9bdf0eadc7bfc0, type: 3}
+  m_Name: MapRegex
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: layers
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[SpriteLayer, Assembly-CSharp],[System.String,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EqualityComparer`1+DefaultComparer[[SpriteLayer,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 6
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|SpriteLayer, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Bg-1
+    - Name: layer
+      Entry: 1
+      Data: Background
+    - Name: sortingLayer
+      Entry: 1
+      Data: Background
+    - Name: sortingOrder
+      Entry: 3
+      Data: -1
+    - Name: parallaxMoveDegree
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.05
+    - Name: 
+      Entry: 4
+      Data: 0.05
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 1
+      Data: -1-(.*)
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|SpriteLayer, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Bg-2
+    - Name: layer
+      Entry: 1
+      Data: Background
+    - Name: sortingLayer
+      Entry: 1
+      Data: Background
+    - Name: sortingOrder
+      Entry: 3
+      Data: -2
+    - Name: parallaxMoveDegree
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.3
+    - Name: 
+      Entry: 4
+      Data: 0.3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 1
+      Data: -2-(.*)
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|SpriteLayer, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Front0
+    - Name: layer
+      Entry: 1
+      Data: Front
+    - Name: sortingLayer
+      Entry: 1
+      Data: Frontground
+    - Name: sortingOrder
+      Entry: 3
+      Data: 0
+    - Name: parallaxMoveDegree
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 1
+      Data: 0(.*)
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|SpriteLayer, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Front1
+    - Name: layer
+      Entry: 1
+      Data: Front
+    - Name: sortingLayer
+      Entry: 1
+      Data: Frontground
+    - Name: sortingOrder
+      Entry: 3
+      Data: 1
+    - Name: parallaxMoveDegree
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: -0.02
+    - Name: 
+      Entry: 4
+      Data: -0.02
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 1
+      Data: 1-(.*)
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|SpriteLayer, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Bg
+    - Name: layer
+      Entry: 1
+      Data: Background
+    - Name: sortingLayer
+      Entry: 1
+      Data: Background
+    - Name: sortingOrder
+      Entry: 3
+      Data: -4
+    - Name: parallaxMoveDegree
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.8
+    - Name: 
+      Entry: 4
+      Data: 0.8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 1
+      Data: '[bB][gG]'
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|SpriteLayer, Assembly-CSharp
+    - Name: name
+      Entry: 1
+      Data: Bg-3
+    - Name: layer
+      Entry: 1
+      Data: Background
+    - Name: sortingLayer
+      Entry: 1
+      Data: Background
+    - Name: sortingOrder
+      Entry: 3
+      Data: -3
+    - Name: parallaxMoveDegree
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.5
+    - Name: 
+      Entry: 4
+      Data: 0.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 1
+      Data: -3-(.*)
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

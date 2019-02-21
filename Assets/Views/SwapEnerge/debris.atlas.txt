@@ -1,0 +1,20 @@
+
+debris.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+debris
+  rotate: false
+  xy: 2, 2
+  size: 118, 194
+  orig: 118, 194
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 2, 198
+  size: 291, 291
+  orig: 291, 291
+  offset: 0, 0
+  index: -1

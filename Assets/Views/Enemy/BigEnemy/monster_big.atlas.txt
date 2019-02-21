@@ -1,0 +1,90 @@
+
+monster_big.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 2, 477
+  size: 620, 522
+  orig: 620, 522
+  offset: 0, 0
+  index: -1
+eyeL
+  rotate: false
+  xy: 624, 586
+  size: 59, 56
+  orig: 59, 56
+  offset: 0, 0
+  index: -1
+eyeLlight
+  rotate: false
+  xy: 774, 770
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+eyeR
+  rotate: false
+  xy: 567, 416
+  size: 47, 59
+  orig: 47, 59
+  offset: 0, 0
+  index: -1
+eyeRlight
+  rotate: false
+  xy: 834, 870
+  size: 10, 6
+  orig: 10, 6
+  offset: 0, 0
+  index: -1
+flower
+  rotate: false
+  xy: 2, 76
+  size: 406, 399
+  orig: 406, 399
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 624, 778
+  size: 208, 221
+  orig: 208, 221
+  offset: 0, 0
+  index: -1
+legb1
+  rotate: false
+  xy: 410, 328
+  size: 155, 147
+  orig: 155, 147
+  offset: 0, 0
+  index: -1
+legb2
+  rotate: false
+  xy: 834, 878
+  size: 137, 121
+  orig: 137, 121
+  offset: 0, 0
+  index: -1
+legf1
+  rotate: false
+  xy: 624, 644
+  size: 148, 132
+  orig: 148, 132
+  offset: 0, 0
+  index: -1
+legf2
+  rotate: false
+  xy: 410, 210
+  size: 135, 116
+  orig: 135, 116
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 2, 2
+  size: 71, 72
+  orig: 71, 72
+  offset: 0, 0
+  index: -1

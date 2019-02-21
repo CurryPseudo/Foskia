@@ -1,0 +1,55 @@
+
+Title.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A
+  rotate: false
+  xy: 429, 2
+  size: 132, 131
+  orig: 132, 131
+  offset: 0, 0
+  index: -1
+F
+  rotate: false
+  xy: 291, 4
+  size: 136, 129
+  orig: 136, 129
+  offset: 0, 0
+  index: -1
+I
+  rotate: false
+  xy: 563, 5
+  size: 57, 128
+  orig: 57, 128
+  offset: 0, 0
+  index: -1
+K
+  rotate: false
+  xy: 148, 5
+  size: 141, 128
+  orig: 141, 128
+  offset: 0, 0
+  index: -1
+O
+  rotate: false
+  xy: 2, 3
+  size: 144, 130
+  orig: 144, 130
+  offset: 0, 0
+  index: -1
+S
+  rotate: true
+  xy: 1317, 143
+  size: 105, 142
+  orig: 105, 142
+  offset: 0, 0
+  index: -1
+tree
+  rotate: false
+  xy: 2, 135
+  size: 1313, 113
+  orig: 1313, 113
+  offset: 0, 0
+  index: -1

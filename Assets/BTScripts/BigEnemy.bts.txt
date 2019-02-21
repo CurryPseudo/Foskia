@@ -1,0 +1,57 @@
+Prio {
+    Prio {
+        Seq {
+            ? !onGround;
+            @playAnim(name = "stand", loop = true);
+            @fallToGround();
+        }
+        ParallelFirst {
+            :while ? !playerInView;
+            Seq {
+                @playAnim(name = "move", loop = true, reset = true);
+                @runToEdge();
+                @playAnim(name = "stand", loop = true, reset = true);
+                @wait(duration = 2);
+                @turnAround();
+            }
+        }
+        Prio {
+            ParallelFirst {
+                :while ? !playerInAttackRange;
+                ParallelAnd {
+                    Seq {
+                        @wait(duration = 0.8);
+                        @faceToPlayer;
+                    }
+                    Prio {
+                        Seq {
+                            ? couldWalkThrough;
+                            @playAnim(name = "move", loop = true);
+                            :success @runToEdge;
+                        }
+                        @playAnim(name = "stand", loop = true);
+                    }
+                }
+            }
+            Seq {
+                @stand();
+                @faceToPlayer;
+                @wait(duration = 0.2);
+                ParallelAnd {
+                    @playJump();
+                    ParallelAnd {
+                        @playSound(name = "BigEnemy", volume = 2);
+                        Seq {
+                            @screenShake();
+                            @jump();
+                            @fallToGround();
+                            @screenShake();
+                        }
+                    }
+                }
+                @playAnim(name = "stand", loop = true);
+                @wait(duration = 1.2);
+            }
+        }
+    }
+}

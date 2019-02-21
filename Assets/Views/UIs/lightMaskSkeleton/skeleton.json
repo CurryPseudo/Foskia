@@ -1,0 +1,1 @@
+{"skeleton":{"hash":"KKa1i3VwLlOjxxhf0AhF1ufy67g","spine":"3.6.52","width":650,"height":653,"images":""},"bones":[{"name":"root"}],"slots":[{"name":"monster light","bone":"root","attachment":"monster light"}],"skins":{"default":{"monster light":{"monster light":{"x":-0.61,"y":14.2,"width":650,"height":653}}}},"animations":{"animation":{}}}

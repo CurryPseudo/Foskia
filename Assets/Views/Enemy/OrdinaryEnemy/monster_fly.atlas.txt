@@ -1,0 +1,62 @@
+
+monster_fly.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 2, 2
+  size: 250, 182
+  orig: 250, 182
+  offset: 0, 0
+  index: -1
+eyeL
+  rotate: false
+  xy: 501, 218
+  size: 7, 16
+  orig: 7, 16
+  offset: 0, 0
+  index: -1
+eyeR
+  rotate: false
+  xy: 501, 236
+  size: 9, 16
+  orig: 9, 16
+  offset: 0, 0
+  index: -1
+eyelight
+  rotate: true
+  xy: 361, 27
+  size: 65, 55
+  orig: 65, 55
+  offset: 0, 0
+  index: -1
+legb
+  rotate: true
+  xy: 418, 17
+  size: 37, 25
+  orig: 37, 25
+  offset: 0, 0
+  index: -1
+legf
+  rotate: false
+  xy: 418, 56
+  size: 32, 36
+  orig: 32, 36
+  offset: 0, 0
+  index: -1
+wingb
+  rotate: false
+  xy: 361, 94
+  size: 138, 158
+  orig: 138, 158
+  offset: 0, 0
+  index: -1
+wingf
+  rotate: true
+  xy: 186, 73
+  size: 179, 173
+  orig: 179, 173
+  offset: 0, 0
+  index: -1

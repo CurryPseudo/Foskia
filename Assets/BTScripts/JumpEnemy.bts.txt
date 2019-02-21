@@ -1,0 +1,51 @@
+// state 0:idle(walking) 1:chase 2:attack
+ParallelAnd {
+    :while Prio {
+        Seq {
+            ? xSpeed == 0;
+            @playAnim(name = "stand", loop = true);
+        }
+        @playAnim(name = "run", loop = true);
+    }
+    :while Prio {
+        ParallelAnd {
+            :while ? onGround;
+            :while Prio{
+                ParallelFirst {
+                    :while ? !playerInView;
+                    Seq {
+                        @runToEdge();
+                        @wait(duration = 1);
+                        @turnAround();
+                    }
+                }
+                Prio {
+                    ParallelFirst {
+                        :while ? !playerInAttackRange;
+                        ParallelAnd {
+                            @faceToPlayer;
+                            :success @runToEdge;
+                        }
+                    }
+                    Seq {
+                        @stand();
+                        ParallelFirst {
+                            :while @faceToPlayer;
+                            ParallelFirst {
+                                :not :until ? !playerInAttackRange;
+                                @wait(duration = 0.6);
+                            }
+                        }
+                        ParallelAnd {
+                            @playSound(name = "JumpEnemy");
+                            @jump();
+                        }
+                    }
+                }
+            }
+        }
+        Seq {
+            @fallToGround();
+        }
+    }
+}

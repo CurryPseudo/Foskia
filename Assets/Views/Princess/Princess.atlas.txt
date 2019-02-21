@@ -1,0 +1,181 @@
+
+Princess.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+clothes1
+  rotate: false
+  xy: 2, 243
+  size: 285, 264
+  orig: 285, 264
+  offset: 0, 0
+  index: -1
+clothes2
+  rotate: false
+  xy: 398, 727
+  size: 219, 295
+  orig: 219, 295
+  offset: 0, 0
+  index: -1
+crown1
+  rotate: false
+  xy: 398, 590
+  size: 128, 135
+  orig: 128, 135
+  offset: 0, 0
+  index: -1
+crown2
+  rotate: false
+  xy: 528, 615
+  size: 104, 110
+  orig: 104, 110
+  offset: 0, 0
+  index: -1
+earL
+  rotate: true
+  xy: 634, 617
+  size: 80, 83
+  orig: 80, 83
+  offset: 0, 0
+  index: -1
+earR
+  rotate: false
+  xy: 398, 520
+  size: 73, 68
+  orig: 73, 68
+  offset: 0, 0
+  index: -1
+eyeL
+  rotate: false
+  xy: 846, 757
+  size: 32, 44
+  orig: 32, 44
+  offset: 0, 0
+  index: -1
+eyeR
+  rotate: true
+  xy: 289, 244
+  size: 30, 43
+  orig: 30, 43
+  offset: 0, 0
+  index: -1
+eyebrow
+  rotate: false
+  xy: 2, 2
+  size: 28, 15
+  orig: 28, 15
+  offset: 0, 0
+  index: -1
+eyelashL
+  rotate: false
+  xy: 881, 813
+  size: 57, 36
+  orig: 57, 36
+  offset: 0, 0
+  index: -1
+eyelashR
+  rotate: false
+  xy: 473, 550
+  size: 41, 38
+  orig: 41, 38
+  offset: 0, 0
+  index: -1
+eyelightL
+  rotate: false
+  xy: 266, 220
+  size: 17, 21
+  orig: 17, 21
+  offset: 0, 0
+  index: -1
+eyelightR
+  rotate: false
+  xy: 528, 595
+  size: 14, 18
+  orig: 14, 18
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 2, 19
+  size: 222, 262
+  orig: 222, 262
+  offset: 0, 0
+  index: -1
+fringeL
+  rotate: false
+  xy: 289, 276
+  size: 49, 231
+  orig: 49, 231
+  offset: 0, 0
+  index: -1
+fringeM
+  rotate: false
+  xy: 619, 803
+  size: 260, 219
+  orig: 260, 219
+  offset: 0, 0
+  index: -1
+fringeR
+  rotate: true
+  xy: 619, 750
+  size: 51, 225
+  orig: 51, 225
+  offset: 0, 0
+  index: -1
+hairback
+  rotate: false
+  xy: 2, 509
+  size: 394, 513
+  orig: 394, 513
+  offset: 0, 0
+  index: -1
+hairfront
+  rotate: false
+  xy: 719, 637
+  size: 65, 60
+  orig: 65, 60
+  offset: 0, 0
+  index: -1
+legL
+  rotate: true
+  xy: 634, 699
+  size: 49, 178
+  orig: 49, 178
+  offset: 0, 0
+  index: -1
+legR
+  rotate: false
+  xy: 340, 323
+  size: 53, 184
+  orig: 53, 184
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 619, 731
+  size: 17, 9
+  orig: 17, 9
+  offset: 0, 0
+  index: -1
+scraf
+  rotate: true
+  xy: 881, 851
+  size: 171, 141
+  orig: 171, 141
+  offset: 0, 0
+  index: -1
+shyL
+  rotate: true
+  xy: 340, 280
+  size: 41, 50
+  orig: 41, 50
+  offset: 0, 0
+  index: -1
+shyR
+  rotate: true
+  xy: 940, 816
+  size: 33, 41
+  orig: 33, 41
+  offset: 0, 0
+  index: -1

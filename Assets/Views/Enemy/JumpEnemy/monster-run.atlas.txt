@@ -1,0 +1,139 @@
+
+monster-run.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blood
+  rotate: false
+  xy: 262, 98
+  size: 284, 146
+  orig: 284, 146
+  offset: 0, 0
+  index: -1
+blood2
+  rotate: false
+  xy: 2, 21
+  size: 85, 18
+  orig: 85, 18
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 695, 179
+  size: 102, 65
+  orig: 102, 65
+  offset: 0, 0
+  index: -1
+e1
+  rotate: true
+  xy: 951, 203
+  size: 41, 49
+  orig: 41, 49
+  offset: 0, 0
+  index: -1
+e2
+  rotate: false
+  xy: 339, 46
+  size: 45, 50
+  orig: 45, 50
+  offset: 0, 0
+  index: -1
+e3
+  rotate: false
+  xy: 852, 198
+  size: 46, 46
+  orig: 46, 46
+  offset: 0, 0
+  index: -1
+e4
+  rotate: true
+  xy: 695, 102
+  size: 23, 44
+  orig: 23, 44
+  offset: 0, 0
+  index: -1
+e5
+  rotate: false
+  xy: 761, 128
+  size: 25, 49
+  orig: 25, 49
+  offset: 0, 0
+  index: -1
+e6
+  rotate: false
+  xy: 2, 2
+  size: 33, 17
+  orig: 33, 17
+  offset: 0, 0
+  index: -1
+e7
+  rotate: true
+  xy: 1002, 220
+  size: 24, 19
+  orig: 24, 19
+  offset: 0, 0
+  index: -1
+e8
+  rotate: false
+  xy: 89, 26
+  size: 24, 13
+  orig: 24, 13
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 386, 57
+  size: 53, 39
+  orig: 53, 39
+  offset: 0, 0
+  index: -1
+eye2
+  rotate: false
+  xy: 799, 192
+  size: 51, 52
+  orig: 51, 52
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 548, 101
+  size: 145, 143
+  orig: 145, 143
+  offset: 0, 0
+  index: -1
+legb1
+  rotate: false
+  xy: 900, 202
+  size: 49, 42
+  orig: 49, 42
+  offset: 0, 0
+  index: -1
+legb2
+  rotate: true
+  xy: 441, 56
+  size: 40, 46
+  orig: 40, 46
+  offset: 0, 0
+  index: -1
+legf1
+  rotate: false
+  xy: 262, 42
+  size: 75, 54
+  orig: 75, 54
+  offset: 0, 0
+  index: -1
+legf2
+  rotate: false
+  xy: 695, 127
+  size: 64, 50
+  orig: 64, 50
+  offset: 0, 0
+  index: -1
+tail
+  rotate: true
+  xy: 2, 41
+  size: 203, 258
+  orig: 203, 258
+  offset: 0, 0
+  index: -1

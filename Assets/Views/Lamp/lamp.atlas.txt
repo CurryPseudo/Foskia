@@ -1,0 +1,41 @@
+
+lamp.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+light1
+  rotate: true
+  xy: 405, 149
+  size: 149, 286
+  orig: 149, 286
+  offset: 0, 0
+  index: -1
+light2
+  rotate: false
+  xy: 975, 448
+  size: 23, 40
+  orig: 23, 40
+  offset: 0, 0
+  index: -1
+monster light
+  rotate: false
+  xy: 2, 52
+  size: 401, 436
+  orig: 401, 436
+  offset: 0, 0
+  index: -1
+shelf
+  rotate: true
+  xy: 405, 300
+  size: 188, 568
+  orig: 188, 568
+  offset: 0, 0
+  index: -1
+source
+  rotate: true
+  xy: 2, 2
+  size: 48, 100
+  orig: 48, 100
+  offset: 0, 0
+  index: -1

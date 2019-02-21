@@ -1,0 +1,789 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721e1ec2f9a70f74ab5c904d18ef7604, type: 3}
+  m_Name: BigEnemy
+  m_EditorClassIdentifier: 
+  asset: {fileID: 4900000, guid: a107b77ff76897e49a63832c701d3817, type: 3}
+  root: {fileID: 114684368172523590}
+  compiledHash: 1453330799
+--- !u!114 &114008284061528392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: runToEdge
+  m_EditorClassIdentifier: 
+  lineNumber: 30
+  args: []
+--- !u!114 &114048641559608072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: playAnim
+  m_EditorClassIdentifier: 
+  lineNumber: 11
+  args:
+  - name: name
+    arg:
+      type: 3
+      intValue: 0
+      floatValue: 0
+      strValue: move
+  - name: loop
+    arg:
+      type: 0
+      intValue: 1
+      floatValue: 0
+      strValue: 
+  - name: reset
+    arg:
+      type: 0
+      intValue: 1
+      floatValue: 0
+      strValue: 
+--- !u!114 &114057839563970950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: screenShake
+  m_EditorClassIdentifier: 
+  lineNumber: 48
+  args: []
+--- !u!114 &114070376545822278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: wait
+  m_EditorClassIdentifier: 
+  lineNumber: 14
+  args:
+  - name: duration
+    arg:
+      type: 2
+      intValue: 2
+      floatValue: 0
+      strValue: 
+--- !u!114 &114070575706207798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: screenShake
+  m_EditorClassIdentifier: 
+  lineNumber: 45
+  args: []
+--- !u!114 &114102229111508994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: stand
+  m_EditorClassIdentifier: 
+  lineNumber: 37
+  args: []
+--- !u!114 &114144389043637292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: playSound
+  m_EditorClassIdentifier: 
+  lineNumber: 43
+  args:
+  - name: name
+    arg:
+      type: 3
+      intValue: 0
+      floatValue: 0
+      strValue: BigEnemy
+  - name: volume
+    arg:
+      type: 2
+      intValue: 2
+      floatValue: 0
+      strValue: 
+--- !u!114 &114167846283026092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: playAnim
+  m_EditorClassIdentifier: 
+  lineNumber: 5
+  args:
+  - name: name
+    arg:
+      type: 3
+      intValue: 0
+      floatValue: 0
+      strValue: stand
+  - name: loop
+    arg:
+      type: 0
+      intValue: 1
+      floatValue: 0
+      strValue: 
+--- !u!114 &114170347831910498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: wait
+  m_EditorClassIdentifier: 
+  lineNumber: 23
+  args:
+  - name: duration
+    arg:
+      type: 1
+      intValue: 0
+      floatValue: 0.8
+      strValue: 
+--- !u!114 &114199473537976386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a675d66a6116847a31941a162e5f28, type: 3}
+  m_Name: '?'
+  m_EditorClassIdentifier: 
+  lineNumber: 9
+  condName: playerInView
+  op: 5
+  arg:
+    type: 0
+    intValue: 0
+    floatValue: 0
+    strValue: 
+--- !u!114 &114212019320656728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: runToEdge
+  m_EditorClassIdentifier: 
+  lineNumber: 12
+  args: []
+--- !u!114 &114223346159860870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8195d5e20817c8e42907b3366a27038e, type: 3}
+  m_Name: success
+  m_EditorClassIdentifier: 
+  lineNumber: 30
+  args: []
+  target: {fileID: 114008284061528392}
+--- !u!114 &114229622992800586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8195d5e20817c8e42907b3366a27038e, type: 3}
+  m_Name: while
+  m_EditorClassIdentifier: 
+  lineNumber: 20
+  args: []
+  target: {fileID: 114927710149216414}
+--- !u!114 &114260468440566968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: turnAround
+  m_EditorClassIdentifier: 
+  lineNumber: 15
+  args: []
+--- !u!114 &114311436636024110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: fallToGround
+  m_EditorClassIdentifier: 
+  lineNumber: 47
+  args: []
+--- !u!114 &114315955331245284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: Seq
+  m_EditorClassIdentifier: 
+  lineNumber: 36
+  children:
+  - {fileID: 114102229111508994}
+  - {fileID: 114556412884519822}
+  - {fileID: 114797364100509726}
+  - {fileID: 114376871326031384}
+  - {fileID: 114924806192944768}
+  - {fileID: 114412583660529390}
+--- !u!114 &114358657521682080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: faceToPlayer
+  m_EditorClassIdentifier: 
+  lineNumber: 24
+  args: []
+--- !u!114 &114376871326031384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: ParallelAnd
+  m_EditorClassIdentifier: 
+  lineNumber: 40
+  children:
+  - {fileID: 114442265137796066}
+  - {fileID: 114883542233344848}
+--- !u!114 &114412583660529390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: wait
+  m_EditorClassIdentifier: 
+  lineNumber: 53
+  args:
+  - name: duration
+    arg:
+      type: 1
+      intValue: 0
+      floatValue: 1.2
+      strValue: 
+--- !u!114 &114442265137796066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: playJump
+  m_EditorClassIdentifier: 
+  lineNumber: 41
+  args: []
+--- !u!114 &114469588346356608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: Seq
+  m_EditorClassIdentifier: 
+  lineNumber: 27
+  children:
+  - {fileID: 114808170914406282}
+  - {fileID: 114714140858843770}
+  - {fileID: 114223346159860870}
+--- !u!114 &114478748426279580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: ParallelAnd
+  m_EditorClassIdentifier: 
+  lineNumber: 21
+  children:
+  - {fileID: 114820857997437760}
+  - {fileID: 114682308943776868}
+--- !u!114 &114556412884519822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: faceToPlayer
+  m_EditorClassIdentifier: 
+  lineNumber: 38
+  args: []
+--- !u!114 &114673344231453928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: Prio
+  m_EditorClassIdentifier: 
+  lineNumber: 2
+  children:
+  - {fileID: 114814468605103376}
+  - {fileID: 114939593539001802}
+  - {fileID: 114780505798834964}
+--- !u!114 &114682308943776868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: Prio
+  m_EditorClassIdentifier: 
+  lineNumber: 26
+  children:
+  - {fileID: 114469588346356608}
+  - {fileID: 114961369568244512}
+--- !u!114 &114684368172523590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: Prio
+  m_EditorClassIdentifier: 
+  lineNumber: 1
+  children:
+  - {fileID: 114673344231453928}
+--- !u!114 &114714140858843770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: playAnim
+  m_EditorClassIdentifier: 
+  lineNumber: 29
+  args:
+  - name: name
+    arg:
+      type: 3
+      intValue: 0
+      floatValue: 0
+      strValue: move
+  - name: loop
+    arg:
+      type: 0
+      intValue: 1
+      floatValue: 0
+      strValue: 
+--- !u!114 &114775649427639128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: Seq
+  m_EditorClassIdentifier: 
+  lineNumber: 10
+  children:
+  - {fileID: 114048641559608072}
+  - {fileID: 114212019320656728}
+  - {fileID: 114947563433284406}
+  - {fileID: 114070376545822278}
+  - {fileID: 114260468440566968}
+--- !u!114 &114780505798834964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: Prio
+  m_EditorClassIdentifier: 
+  lineNumber: 18
+  children:
+  - {fileID: 114927290921513206}
+  - {fileID: 114315955331245284}
+--- !u!114 &114797364100509726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: wait
+  m_EditorClassIdentifier: 
+  lineNumber: 39
+  args:
+  - name: duration
+    arg:
+      type: 1
+      intValue: 0
+      floatValue: 0.2
+      strValue: 
+--- !u!114 &114805490256018130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: jump
+  m_EditorClassIdentifier: 
+  lineNumber: 46
+  args: []
+--- !u!114 &114808170914406282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a675d66a6116847a31941a162e5f28, type: 3}
+  m_Name: '?'
+  m_EditorClassIdentifier: 
+  lineNumber: 29
+  condName: couldWalkThrough
+  op: 0
+  arg:
+    type: 0
+    intValue: 1
+    floatValue: 0
+    strValue: 
+--- !u!114 &114814468605103376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: Seq
+  m_EditorClassIdentifier: 
+  lineNumber: 3
+  children:
+  - {fileID: 114816438051407016}
+  - {fileID: 114167846283026092}
+  - {fileID: 114830840359068956}
+--- !u!114 &114816438051407016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a675d66a6116847a31941a162e5f28, type: 3}
+  m_Name: '?'
+  m_EditorClassIdentifier: 
+  lineNumber: 4
+  condName: onGround
+  op: 5
+  arg:
+    type: 0
+    intValue: 0
+    floatValue: 0
+    strValue: 
+--- !u!114 &114820857997437760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: Seq
+  m_EditorClassIdentifier: 
+  lineNumber: 22
+  children:
+  - {fileID: 114170347831910498}
+  - {fileID: 114358657521682080}
+--- !u!114 &114830840359068956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: fallToGround
+  m_EditorClassIdentifier: 
+  lineNumber: 6
+  args: []
+--- !u!114 &114883542233344848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: ParallelAnd
+  m_EditorClassIdentifier: 
+  lineNumber: 42
+  children:
+  - {fileID: 114144389043637292}
+  - {fileID: 114951982821403612}
+--- !u!114 &114894880377494286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8195d5e20817c8e42907b3366a27038e, type: 3}
+  m_Name: while
+  m_EditorClassIdentifier: 
+  lineNumber: 9
+  args: []
+  target: {fileID: 114199473537976386}
+--- !u!114 &114924806192944768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: playAnim
+  m_EditorClassIdentifier: 
+  lineNumber: 52
+  args:
+  - name: name
+    arg:
+      type: 3
+      intValue: 0
+      floatValue: 0
+      strValue: stand
+  - name: loop
+    arg:
+      type: 0
+      intValue: 1
+      floatValue: 0
+      strValue: 
+--- !u!114 &114927290921513206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: ParallelFirst
+  m_EditorClassIdentifier: 
+  lineNumber: 19
+  children:
+  - {fileID: 114229622992800586}
+  - {fileID: 114478748426279580}
+--- !u!114 &114927710149216414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a675d66a6116847a31941a162e5f28, type: 3}
+  m_Name: '?'
+  m_EditorClassIdentifier: 
+  lineNumber: 20
+  condName: playerInAttackRange
+  op: 5
+  arg:
+    type: 0
+    intValue: 0
+    floatValue: 0
+    strValue: 
+--- !u!114 &114939593539001802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: ParallelFirst
+  m_EditorClassIdentifier: 
+  lineNumber: 8
+  children:
+  - {fileID: 114894880377494286}
+  - {fileID: 114775649427639128}
+--- !u!114 &114947563433284406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: playAnim
+  m_EditorClassIdentifier: 
+  lineNumber: 13
+  args:
+  - name: name
+    arg:
+      type: 3
+      intValue: 0
+      floatValue: 0
+      strValue: stand
+  - name: loop
+    arg:
+      type: 0
+      intValue: 1
+      floatValue: 0
+      strValue: 
+  - name: reset
+    arg:
+      type: 0
+      intValue: 1
+      floatValue: 0
+      strValue: 
+--- !u!114 &114951982821403612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743b61ada5c7a644c8a06089fee2d593, type: 3}
+  m_Name: Seq
+  m_EditorClassIdentifier: 
+  lineNumber: 44
+  children:
+  - {fileID: 114070575706207798}
+  - {fileID: 114805490256018130}
+  - {fileID: 114311436636024110}
+  - {fileID: 114057839563970950}
+--- !u!114 &114961369568244512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e97ecdfff66cd648b0539699fef973b, type: 3}
+  m_Name: playAnim
+  m_EditorClassIdentifier: 
+  lineNumber: 32
+  args:
+  - name: name
+    arg:
+      type: 3
+      intValue: 0
+      floatValue: 0
+      strValue: stand
+  - name: loop
+    arg:
+      type: 0
+      intValue: 1
+      floatValue: 0
+      strValue: 

@@ -1,0 +1,195 @@
+
+Lumo.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 2, 204
+  size: 269, 306
+  orig: 269, 306
+  offset: 0, 0
+  index: -1
+callorL
+  rotate: true
+  xy: 678, 177
+  size: 100, 82
+  orig: 100, 82
+  offset: 0, 0
+  index: -1
+collarR
+  rotate: false
+  xy: 762, 214
+  size: 90, 80
+  orig: 90, 80
+  offset: 0, 0
+  index: -1
+earL
+  rotate: false
+  xy: 414, 168
+  size: 85, 67
+  orig: 85, 67
+  offset: 0, 0
+  index: -1
+earR
+  rotate: false
+  xy: 904, 411
+  size: 87, 99
+  orig: 87, 99
+  offset: 0, 0
+  index: -1
+eyebrow
+  rotate: true
+  xy: 838, 167
+  size: 45, 14
+  orig: 45, 14
+  offset: 0, 0
+  index: -1
+eyelashL
+  rotate: false
+  xy: 904, 373
+  size: 53, 36
+  orig: 53, 36
+  offset: 0, 0
+  index: -1
+eyelashR
+  rotate: false
+  xy: 762, 180
+  size: 74, 32
+  orig: 74, 32
+  offset: 0, 0
+  index: -1
+eyelightL
+  rotate: true
+  xy: 249, 188
+  size: 14, 22
+  orig: 14, 22
+  offset: 0, 0
+  index: -1
+eyelightR
+  rotate: false
+  xy: 993, 489
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 273, 237
+  size: 236, 273
+  orig: 236, 273
+  offset: 0, 0
+  index: -1
+footL
+  rotate: true
+  xy: 196, 2
+  size: 64, 181
+  orig: 64, 181
+  offset: 0, 0
+  index: -1
+footR
+  rotate: true
+  xy: 2, 2
+  size: 59, 192
+  orig: 59, 192
+  offset: 0, 0
+  index: -1
+hair
+  rotate: false
+  xy: 511, 279
+  size: 248, 231
+  orig: 248, 231
+  offset: 0, 0
+  index: -1
+hair4
+  rotate: true
+  xy: 511, 190
+  size: 87, 165
+  orig: 87, 165
+  offset: 0, 0
+  index: -1
+hairL
+  rotate: true
+  xy: 761, 296
+  size: 97, 138
+  orig: 97, 138
+  offset: 0, 0
+  index: -1
+hairR
+  rotate: false
+  xy: 761, 395
+  size: 141, 115
+  orig: 141, 115
+  offset: 0, 0
+  index: -1
+hairback
+  rotate: true
+  xy: 273, 184
+  size: 51, 139
+  orig: 51, 139
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 501, 216
+  size: 19, 5
+  orig: 19, 5
+  offset: 0, 0
+  index: -1
+mouth-open
+  rotate: false
+  xy: 901, 311
+  size: 26, 13
+  orig: 26, 13
+  offset: 0, 0
+  index: -1
+nose
+  rotate: false
+  xy: 945, 366
+  size: 4, 5
+  orig: 4, 5
+  offset: 0, 0
+  index: -1
+pupilL
+  rotate: false
+  xy: 959, 360
+  size: 31, 49
+  orig: 31, 49
+  offset: 0, 0
+  index: -1
+pupilR
+  rotate: true
+  xy: 854, 199
+  size: 38, 54
+  orig: 38, 54
+  offset: 0, 0
+  index: -1
+scarf1
+  rotate: false
+  xy: 2, 63
+  size: 126, 139
+  orig: 126, 139
+  offset: 0, 0
+  index: -1
+scarf2
+  rotate: false
+  xy: 130, 68
+  size: 117, 134
+  orig: 117, 134
+  offset: 0, 0
+  index: -1
+shyL
+  rotate: false
+  xy: 901, 326
+  size: 42, 45
+  orig: 42, 45
+  offset: 0, 0
+  index: -1
+shyR
+  rotate: false
+  xy: 854, 239
+  size: 54, 55
+  orig: 54, 55
+  offset: 0, 0
+  index: -1
