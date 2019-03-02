@@ -19,14 +19,14 @@ public class ViewMesh : MonoBehaviour {
         }
     }
     public void Awake() {
-        if(mesh == null) mesh = new Mesh();
-        mesh.MarkDynamic();
-        CacMesh();
+        //if(mesh == null) mesh = new Mesh();
+        //mesh.MarkDynamic();
+        //CacMesh();
     }
     public void Start() {
     }
     public void Update() {
-        CacMesh();
+        //CacMesh();
     }
     public List<Vector2> RaycastPoints() {
         float deltaDegree = 360.0f / (float) rayCount;    

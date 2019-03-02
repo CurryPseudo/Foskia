@@ -3,6 +3,7 @@ using UnityEngine.Rendering;
 using PseudoTools;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
+using System.Collections;
 using System;
 public class LightSystem : SerializedMonoBehaviour {
 //public class LightSystem : MonoBaehaviour {
@@ -40,37 +41,34 @@ public class LightSystem : SerializedMonoBehaviour {
     }
     public void Start() {
     }
+    public IEnumerator UpdateRuntimeData(LayerRuntimeData runtimeData) { 
+        while(true) {
+            CameraUtils.CopyCameraPosAndSize(runtimeData.catchCamera, Camera.main);
+            ScreenTextureAllocator.allocateTexture(ref runtimeData.catchTexture, ()=>runtimeData.catchCamera.targetTexture = runtimeData.catchTexture);
+            yield return null;
+        }
+
+    }
     public void OnEnable() {
-        Func<LayerMask, string, Camera> createCamera = (cullingLayer, goName) => {
-            var go = GoUtils.AddAnEmptyGameObject(goName, transform);
-            var camera = CameraUtils.AddRenderCamera(go, cullingLayer);
-            camera.depth = -2;
-            StartCoroutine(CoroutineUtils.UpdateAction(() => CameraUtils.CopyCameraPosAndSize(camera, Camera.main)));
-            return camera;
-        };
         Color clearColor = new Color(0f, 0f, 0f, 0f);
         //Set up catch cameras.
         runtimeDatasMap.Clear();
         foreach(var pair in lightLayerMap) {
             var runtimeData = new LayerRuntimeData();
-            var camera = createCamera(pair.Value.catchLayer, "Catch " + pair.Key);
+            var go = GoUtils.AddAnEmptyGameObject("Catch " + pair.Key, transform);
+            var camera = CameraUtils.AddRenderCamera(go, pair.Value.catchLayer);
+            camera.depth = -2;
             camera.backgroundColor = clearColor;
             runtimeData.catchCamera = camera;
-            runtimeData.lightTexture = ScreenTextureAllocator.generateRenderTexture(0.3f);
-            StartCoroutine(CoroutineUtils.UpdateAction(() => ScreenTextureAllocator.allocateTexture(ref runtimeData.lightTexture, 0.3f)));
-            runtimeData.mixTexture = ScreenTextureAllocator.generateRenderTexture();
             runtimeData.catchTexture = ScreenTextureAllocator.generateRenderTexture();
             runtimeData.catchCamera.targetTexture = runtimeData.catchTexture;
-            StartCoroutine(CoroutineUtils.UpdateAction(() => ScreenTextureAllocator.allocateTexture(ref runtimeData.catchTexture, ()=>runtimeData.catchCamera.targetTexture = runtimeData.catchTexture)));
-            StartCoroutine(CoroutineUtils.UpdateAction(() => ScreenTextureAllocator.allocateTexture(ref runtimeData.mixTexture)));
+            StartCoroutine(UpdateRuntimeData(runtimeData));
             runtimeDatasMap.Add(pair.Key, runtimeData);
         }
         MixEffect.SetLightMixShader(LightMixMesh);
         MixEffect.SetScreenMixShader(ScreenMix);
         BlurEffect.SetShader(BlurShader);
-        
         finalTexture = ScreenTextureAllocator.generateRenderTexture();
-        StartCoroutine(CoroutineUtils.UpdateAction(() => ScreenTextureAllocator.allocateTexture(ref finalTexture)));
         layers = new List<string>(lightLayerMap.Keys);
         layers.Sort((ll, rl) => lightLayerMap[ll].depth.CompareTo(lightLayerMap[rl].depth));
         originMainCameraCullingMask = Camera.main.cullingMask;
@@ -84,9 +82,25 @@ public class LightSystem : SerializedMonoBehaviour {
     public void Update() {
         DrawMesh(finalTexLayer, Camera.main, finalTexture);
     }
+    private RenderTextureDescriptor GenCameraTex(Camera camera, RenderTextureFormat format, float scale = 1) {
+        return new RenderTextureDescriptor(Mathf.RoundToInt(camera.pixelWidth * scale), Mathf.RoundToInt(camera.pixelHeight * scale), format);
+    }
+    private int GetTemporaryRTId(string idName, CommandBuffer cb, RenderTextureDescriptor desc) {
+        var id = Shader.PropertyToID(idName);
+        cb.GetTemporaryRT(id, desc);
+        return id;
+    }
     public void OnRenderObject() {
         //Set up layer-light dictionary
+
         if(Camera.current == Camera.main) {
+            var camera = Camera.main;
+            CommandBuffer cb = new CommandBuffer();
+
+            var lightTexId = GetTemporaryRTId("_LightMap", cb, GenCameraTex(camera, RenderTextureFormat.ARGBFloat, 0.3f));
+            var shadowTexId = GetTemporaryRTId("_ShadowMap", cb, GenCameraTex(camera, RenderTextureFormat.RFloat, 0.3f));
+            var diffuseTexId = GetTemporaryRTId("_DiffuseMap", cb, GenCameraTex(camera, RenderTextureFormat.ARGBFloat));
+
             var renderers = MonoBehaviour.FindObjectsOfType<LightRenderer>();
             var lightsMap = new Dictionary<string, List<LightRenderer>>();
             foreach(var layer in lightLayerMap.Keys) {
@@ -104,42 +118,39 @@ public class LightSystem : SerializedMonoBehaviour {
             foreach(var layer in lightLayerMap.Keys) {
                 var runtimeData = runtimeDatasMap[layer];
                 var lightLayer = lightLayerMap[layer];
-                RenderUtils.RenderActive(runtimeData.lightTexture, ()=> {
-                    GL.Clear(true, true, new Color(0,0,0,1), 0);
-                    foreach(var renderer in lightsMap[layer]) {
-                        var mesh = renderer.viewMesh.mesh;
-                        lightMeshM.SetVector("_LightPos", renderer.viewMesh.pos);
-                        lightMeshM.SetFloat("_Radius", renderer.viewMesh.radius);
-                        lightMeshM.SetFloat("_Pow", renderer.lightPow);
-                        lightMeshM.SetFloat("_BrightNess", renderer.brightness);
-                        lightMeshM.SetColor("_LightColor", renderer.lightColor);
-                        var success = lightMeshM.SetPass(0);
-                        Graphics.DrawMeshNow(renderer.viewMesh.mesh, Matrix4x4.identity);
-                        
-                    }
-                });
+                
+                cb.SetRenderTarget(lightTexId);
+                cb.ClearRenderTarget(false, true, Color.black);
+                foreach(var renderer in lightsMap[layer]) {
+                    cb.SetRenderTarget(shadowTexId);
+                    cb.ClearRenderTarget(false, true, Color.black);
+                    renderer.PointLight.DrawShadowMesh(ref cb);
+                    cb.SetRenderTarget(lightTexId);
+                    renderer.PointLight.DrawLightMesh(ref cb, shadowTexId);
+                }
                 // Blur light tex.
-                BlurEffect.SetBlurSize(lightLayer.blurSize);
-                BlurEffect.SetIterTimes(lightLayer.iterTimes);
-                BlurEffect.BlurBlit(ref runtimeData.lightTexture);
+                //BlurEffect.SetBlurSize(lightLayer.blurSize);
+                //BlurEffect.SetIterTimes(lightLayer.iterTimes);
+                //BlurEffect.BlurBlit(ref runtimeData.lightTexture);
                 //DrawMesh(lightTexLayer, runtimeData.blurCamera, runtimeData.lightTexture);
                 // Mix catch texture with light texture
-                Graphics.Blit(runtimeData.catchTexture, runtimeData.mixTexture);
-                MixEffect.LightMixBlit(runtimeData.mixTexture, runtimeData.lightTexture);
+                cb.Blit(runtimeData.catchTexture, diffuseTexId);
+                cb.SetRenderTarget(diffuseTexId);
+                DrawScreenTex(cb, lightTexId, camera, LightMixMesh);
+                cb.SetRenderTarget(finalTexture);
+                DrawScreenTex(cb, diffuseTexId, camera, ScreenMix);
             }
-            
-            MixEffect.ScreenMixBlit(finalTexture, getMixTextures());
+            Graphics.ExecuteCommandBuffer(cb);
         }
+    }
+    public void DrawScreenTex(CommandBuffer cb, RenderTargetIdentifier tex, Camera camera, Shader shader) {
+        cb.SetGlobalTexture("_MainTex", tex);
+        cb.DrawMesh(CameraUtils.QuadMesh, Matrix4x4.Translate(VectorUtils.V32(camera.transform.position)), new Material(shader));
     }
     public void DrawMesh(string layer, Camera camera, RenderTexture tex) {
         var mpb = new MaterialPropertyBlock();
         mpb.SetTexture("_MainTex", tex);
         Graphics.DrawMesh(CameraUtils.QuadMesh, VectorUtils.V32(Camera.main.transform.position), Quaternion.identity, MixEffect.ScreenMixM, LayerMask.NameToLayer(layer), camera, 0, mpb);
-    }
-    private IEnumerable<RenderTexture> getMixTextures() {
-        foreach(var layer in layers) {
-            yield return runtimeDatasMap[layer].mixTexture;
-        }
     }
     
     [System.Serializable]
@@ -152,8 +163,6 @@ public class LightSystem : SerializedMonoBehaviour {
     }
     public class LayerRuntimeData {
         public Camera catchCamera;
-        public RenderTexture lightTexture;
         public RenderTexture catchTexture;
-        public RenderTexture mixTexture;
     }
 }

@@ -440,7 +440,7 @@ MonoBehaviour:
   finalTexLayer: FinalTex
   BlurShader: {fileID: 4800000, guid: fa7662a71debd8d42bccb596f256e417, type: 3}
   LightViewMesh: {fileID: 4800000, guid: ffbfec4b51bc0a24abd175780be81659, type: 3}
-  LightMixMesh: {fileID: 4800000, guid: 46341acd31f0a934ba9b06d0622cc800, type: 3}
+  LightMixMesh: {fileID: 4800000, guid: 8ac6cccb70d3c4ea78396f7f6ed12e9a, type: 3}
   ScreenMix: {fileID: 4800000, guid: 7957a0f5802ea6348bb8134483a4d190, type: 3}
   finalTexture: {fileID: 0}
 --- !u!4 &1772751243
