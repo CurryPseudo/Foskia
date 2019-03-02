@@ -7,18 +7,6 @@ using System.Collections;
 using System;
 public class LightSystem : SerializedMonoBehaviour {
 //public class LightSystem : MonoBaehaviour {
-    public static LightSystem main{
-        get {
-            return GameObject.Find("LightSystem").GetComponent<LightSystem>();
-        }
-    }
-    public string lightTexLayer;
-    //[ReadOnly]
-    public LayerMask LightTexLayerMask {
-        get {
-            return LayerMask.GetMask(lightTexLayer);
-        }
-    }
     public string finalTexLayer;
     public LayerMask finalTexLayerMask {
         get {
@@ -38,8 +26,6 @@ public class LightSystem : SerializedMonoBehaviour {
     private LayerMask originMainCameraCullingMask;
     public void Awake() {
         DontDestroyOnLoad(gameObject);
-    }
-    public void Start() {
     }
     public IEnumerator UpdateRuntimeData(LayerRuntimeData runtimeData) { 
         while(true) {
@@ -157,9 +143,6 @@ public class LightSystem : SerializedMonoBehaviour {
     public class LightLayer {
         public LayerMask catchLayer;
         public float depth = 0;
-        public float blurSize = 2;
-        public int iterTimes = 2;
-        public bool lighted = true;
     }
     public class LayerRuntimeData {
         public Camera catchCamera;
